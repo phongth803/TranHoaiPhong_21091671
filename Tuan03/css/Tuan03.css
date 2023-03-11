@@ -331,8 +331,9 @@ h1 {
 
 #animated {
   position: absolute;
-  width: 100px;
-  left: 0;
+  width: 400px;
+  height: 500px;
+  left: 0px;
   top: 100px;
   background: #ffcc00;
 }
