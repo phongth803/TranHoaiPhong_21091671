@@ -1,331 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            padding: 0;
-            margin: 0 auto;
-        }
-        .wrapper{
-            height: 700px;
-            width: 960px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-        .header{
-            height: 140px;
-            width: 960px;
-            background-color: #294e79; position: relative;
-        }
         
-        .p1  {position: absolute; top: 30px; left: 90px; color: whitesmoke;font-weight: bolder; font-size: 35px;}
-        .p2{position: absolute; top:70px; left: 90px; color: whitesmoke;font-weight: bolder; font-size: 20px;}
-    
-        #frm1{position: absolute; top: 20px; left: 750px;}
-        #img1{position: absolute; width: 85px ; top:5px;
-        ;    
-        }
-        .top-menu li {
-            display: inline-block;
-            background-color: #50749e; list-style: none;
-            position: absolute;
-            bottom: 5px;
-            padding: 0 10px;
-            line-height: 40px;
-            
-            border: 1px solid whitesmoke;
-            border-radius: 10%;
-        }
-        li a {
-            text-decoration: none; color: whitesmoke;
-        }
-        .top-menu li:hover{background-color: blanchedalmond; border: 1px solid rosybrown;}
-        li:hover>a{color: #000; font-weight: lighter;font-style: italic;}
-        .top-menu li:nth-child(1){
-            right: 425px;
-        }
-        .top-menu li:nth-child(2){
-            right: 325px;
-        }
-        .top-menu li:nth-child(3){
-            right: 215px;
-        }
-        .top-menu li:nth-child(4){
-            right: 80px;
-        }
-        .top-menu li:nth-child(5){
-            right: 10px;
-        }
+*{
+    padding: 0px;
+    margin: 0px;
+}
 
-        /* body */
-        .content {
-           
-        }
-        .bocuc1{
-            left: 10px;
-            position: relative;
-            width: 70%;
-            height: 100px;
-            float: left;
+.main {
+    width: 1089px;
+    height: 660px;
+    background-color: #ccc;
+    align-items: center;
+    border: 2px solid #000;
+    margin: 0px auto;
+}
+
+.header {
+    width: 1089px;
+    height: 120px;
+    background-color: #483D8B;
+    display: flex;  
+}
+
+.header .header-left {
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.header .header-img {
+    margin-left: 30px;
+    width: 80px; 
+}
+
+.header-left h1,
+.header-left p {
+    color: #fff;
+}
+
+.header .header-right {
+    width: 65%;
+}
+
+.header-right .seach{
+    text-align: right;
+    padding: 16px;
+}
+
+.header input[type="text"] {
+    width: 280px;
+    height: 25px;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border: 1px solid blue;
+}
+
+.header input[type="button"] {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    height: 25px;
+    border: 1px solid blue;
+
+}
+
+.menu-list .list-item {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+}
+
+.list-item>li{
+    position: relative;
+}
+
+.list-item>li>a{
+    margin-top: 10px;
+}
+
+.list-item a{
+    display: inline-block;
+    padding: 14px 22px;
+    background-color: blue;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+.sub-list{
+    display: none;
+    list-style: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.list-item>li:hover>a,
+.sub-list li:hover a{
+    background-color: #ccc;
+    color: #000;
+}
+
+.list-item li:hover .sub-list{
+    display: block;
+}
+
+/* content */
+.content {
+    width: 1089px;
+    height: 500px;
+    background-color: #fff;
+    padding: 64px 12px;
+    box-sizing: border-box; 
+    display: flex;
+}
+
+.content .content-left{
+    width: 70%;
+    opacity: 0.6;
+}
+
+.left-infor{
+    display: flex;
+}
+
+.left-1{
+    width: 60%;
+    padding-right: 32px;
+}
+
+.left-1>p{
+    color: red;
+    text-shadow: 8px 8px 8px #000 ;
+    font-style: italic;
+    padding-bottom: 16px;
+}
+
+.form {
+    display: flex;
+}
+
+.form-left {
+    width: 50%;
+  
+}
+
+.form-right {
+    width: 50%;
+    padding-left: 16px;
+}
+
+.form-botton {
+    padding-top: 16px;
+}
+
+.form-botton .btt{
+    padding: 4px 10px;
+    margin: 14px 14px 0px 0px;
+}
+
+.left-2{
+    width: 40%;
+    padding-left: 32px;
+}
+
+.content .content-right{
+    width: 30%;
+    background-color: #E6E6FA;
+    padding: 24px;
+}
 
 
-        }
-        .bocuc1-1{
-            position: absolute;
-            top: 40px;
-        }    
-       .bocuc2{
-            position: relative;
-            width: 30%;
-            height: 500px;
-            float: right;
-        }
-    .bocuc2-0{
-        position: absolute;
-        height: 350px;
-        width: 250px;
-        background-color: #f9f9f9;
-        top: 60px;
-        left: 20px;
-        right: 10px;
-    }
-    .bocuc2-1{
-        position: absolute;
-        
-        font-size: 24px;
-        left: 10px;
-    }
-    .bocuc2-2{
-        position: absolute;
-        top: 70px;
-        left: 10px;
-        right: 30px;
-        
-    }
-    .bocuc2-3{
-        position: absolute;
-        top:180px;
-        left: 10px;
-       
-    }
-    .bocuc2-4{
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        color: blue;
-    }
-        .bocuc3{
-            position: relative;
-         
-            width: 40%;
-            height: 400px;
-            float: left;
-        }
-        .bocuc3-1{
-            position: absolute;
-            left: 10px;
-        }
-        .bocuc3-2{
-            position: absolute;
-            left: 10px;
-        }
-        .bocuc3-3{
-            position: absolute;
-            top: 80px;
-            left: 10px;
-        }
-        .bocuc3-4{
-            position: absolute;
-            right: 0;
-            top: 80px;
-            
-        }
-        .bocuc3-5{
-            position: absolute;
-            top: 200px;
-            left: 10px;
-        }
-        .bocuc3-6{
-            position: absolute;
-            bottom: 50px;
-            left: 10px;
-            padding: 0 12px;
-        }
-        .bocuc4{
-            position: relative;
-            width: 30%;
-            height: 400px;
-            float: right;
-            font-size: 17px;
-            
-           
-        }
-        .bocuc4-1{
-            position: absolute;
-            font-size: 22px;
-            left: 30px;
-            
-        }
-        .bocuc4-2{
-            
-            position: absolute;
-            top: 40px;
-            left: 30px;
-            top: 60px;
-           
-        
-        }
-        .bocuc4-4{
-            position: absolute;
-            top: 160px;
-            left: 30px;
-        }
-        .bocuc4-3{
-            position: absolute;
-            top: 240px;
-            left: 30px;
-        }
-        
-        .footer{
-            position: relative;
-            background-color: #1c3451 ;
-            width: 100%;
-            height: 60px;
-            float: right;
-            color: #fff;
-            line-height: 60px;
-            
-        }
-        .footer1{
-            position: absolute;
-            left: 10px;
-        }
-   
+.content-right h2,
+.content-right p {
+    opacity: 0.6;
+    text-align: justify;
+    font-weight: 500;
+}
+
+.content-right img{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 4px;
+    margin: 12px 0;
+}
+
+.content-right a {
+    text-decoration: none;
+    color: blue;
+    padding-top: 12px;
+    float: right;
+    font-weight: 600;
+}
+
+
+footer{
+    background-color: #294e79;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+}
     </style>
 </head>
+
 <body>
-    <div class="wrapper">
-         <div class="header">
-            <img src="../img/hoa.png" alt="" id="img1">
-            <div class="text-header">
-                <p class="p1">
-                    FlowerBox 360
-                </p>
-                <p class="p2">
-                    ...to get your daily dose of luxury roses?
-                    
-                </p>
-            </div>
-            <form action="" method="get" id="frm1">
-            <input style="height: 24px; border-radius: 15%;" placeholder=" Search the site..." type="text" name="txtName" >
-            <button style="color: #fff; background-color: rgb(40, 19, 156);" type="submit">GO</button>
-        </form>
-        <ul class="top-menu">
-            <li><a href="">Home</a></li>
-            <li><a href="">Promotion</a></li>
-            <li><a href="">Gift Baskets</a></li>
-            <li><a href="">Flower Services</a></li>
-            <li><a href="">About</a></li>
-        </ul>
-    </div>
-        <div  class="content">
-              <div  class="bocuc1">
-                <div class="bocuc1-1">
-                    <p style="font-size: 22px;" class="text1" >Why Not Contact Us Today!</p>
-                    <p style="font-size: 24px;"> ------------------------------------------------------------------------------------</p>
+    <div class="main">
+        <header class="header">
+            <div class="header-left">
+                <img src="../img/hoa.png" alt="" class="header-img">
+                <div class="header-infor">
+                    <h1>
+                        FlowerBox 360
+                    </h1>
+                    <p>
+                        ..to get your daily dose of luxury roses!
+                    </p>
                 </div>
+            </div>
+
+            <div class="header-right">
+                <form action="" class="seach">
+                    <input type="text" placeholder="Seach the site...">
+                    <input type="button" value="GO">
+                </form>
+
+                <div class="menu-list">
+                    <ul class="list-item">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Promotion</a></li>
+                        <li><a href="">Gift Baskets</a></li>
+                        <li>
+                            <a href="">Flower Services</a>
+                            <ul class="sub-list">
+                                <li><a href="">Flower for Wedding</a></li>
+                                <li><a href="">Flower for Conference</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">About</a></li>
+                    </ul>
                 </div>
+            </div>
+        </header>
 
-          <div class="bocuc2">
-        <div class="bocuc2-0">
-            <div class="bocuc2-1">
-                <p>Discounts & Specials</p>
-                <p>----------------------------</p>
+        <div class="content">
+            <div class="content-left">
+                <h2>Why Not Contact Us Today!</h2>
+                <p>--------------------------------------------------------------------------------------------------------------------------------
+                </p>
+                <div class="left-infor">
+                    <div class="left-1">
+                        <p>For FlowerBox 360 shoppers, that means not only can you send your friends and loved ones the
+                            highest quality flowers on online, but that you can do so at a great value.</p>
+                        <div class="form">
+                            <div class="form-left">
+                                <label for="">Name:</label>
+                                <input style="width: 97%; margin-bottom: 16px;;" type="text" name="" id="">
+                                <label for="">Telephone:</label>
+                                <input style="width: 97%;" type="tel" name="" id="">
+                            </div>
+
+                            <div class="form-right">
+                                <label for="">Email:</label>
+                                <input style="width: 97% ; margin-bottom: 16px;" type="email" name="" id="">
+                                <label for="">Subjet:</label>
+                                <input style="width: 97%;" type="text" name="" id="">
+                            </div>
+                        </div>
+                        <div class="form-botton">
+                            <label for="">Messsage:</label> <br>
+                            <textarea name="" id="" cols="50%" rows="5"></textarea>
+                            <button class="btt" type="submit">Submit</button>
+                            <button class="btt" type="reset">Reset</button>
+
+                        </div>
+                    </div>
+
+                    <div class="left-2">
+                        <h2>FlowerBox 360 Infor!</h2>
+                        <p>-------------------------------------------</p>
+
+                        <p>Operating Hours: <br>
+                            Monday-Friday: 9.00am - 5.00pm. <br>
+                            Sunday: Closed (No Deliveries) <br>
+                            ORDER ONLINE 24/7
+                            <br><br><br>
+                            Software Engineering Dept. <br>
+                            Infromation Technolohy Falcytt <br>
+                            Fist Floor, H Building
+                            <br><br>
+                            12 Nguyen Van Bao St., Ward 4 <br>
+                            Go vap District <br>
+                            Ho Chi Minh City <br>
+                            Tel: 0283 8940 390 <br>
+                            Fax: 0283.9940 954
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="bocuc2-2">
-                <img src="../img/hoa1.png" alt="" style="width: 220px; border:1px solid #000  ; ">
+            <div class="content-right">
+                <h2>Discounts & Specials</h2>
+                <p>---------------------------------------------------------</p>
+                <img src="../img/hoa2.png" alt="">
+                <p>FlowerBox 360 offers many great discounts throughout the year, from coupons and coupon codes, to
+                    promo codes and other savings. We also offer military flowe discounts to our wonderful troops!</p>
+                <a href="">Read More >></a>
             </div>
-
-            <div class="bocuc2-3">
-                <p>FlowerBox 360 offers many great discounts throughout the year, from coupons and coupon codes, to promo codes and other savings. We also offer military flowe discounts to our wonderful troops</p>
-            </div>
-            <div class="bocuc2-4">
-                <p>Read More >></p>
-            </div>
-            
-          </div>
-
-         </div>
-          <div class="bocuc3"> 
-            <p class="bocuc3-2" style="color: red;  text-shadow: 4px 4px 10px #221414;">for FlowerBox 360 shoppers, that means not only can you send your friends and loved ones the highest quality flowers on online, but that you can do so at a great value</p>
-        <div class="bocuc3-3">
-        <p> Name:</p>
-        <input style="width: 180px;" type="text">
-        <p>Telephone:</p>
-        <input style="width: 180px;" type="text">
         </div>
-        <div class="bocuc3-4">
-        <p>Email:</p>
-        <input style="width: 180px;"type="text">
-        <p>Subject:</p>
-        <input style="width: 180px;" type="text">
-         </div>
-         <div class="bocuc3-5">
-         <p>Message:</p>
-         <textarea name="Message" id="" cols="46" rows="5"></textarea>
-        </div>
-        
-        <div class="bocuc3-6">
-        <input style="padding: 5px 10px;" type="submit" value="Submit">
-        <input style="padding: 5px 10px;"  type="reset" value="reset">
-        </div>
-
-        </div>
-
-
-          <div class="bocuc4">
-            <div class="bocuc4-1">
-                FlowerBox 360 Info!
-                <p style="font-size: 24px;">--------------------------------</p>
-
-            </div>
-
-
-            <div class="bocuc4-2">
-                Operating Hours: <br>
-                Monday-Friday: 9.00am - 5.00pm. <br>
-                Sunday: Closed (No Deliveries) <br>
-                ỎDER ONLINE 24/7
-            </div>
-            
-            <div class="bocuc4-4">
-                Software Engineering Dept. <br>
-                Infromation Technolohy Falcytt <br>
-                Fist Floor, H Building
-            </div>
-
-            <div class="bocuc4-3">
-                12 Nguyen Van Bao St., Ward 4 <br>
-                Go vap District <br>
-                Ho Chi Minh City <br>
-                Tel: 0283 8940 390 <br>
-                Fax: 0283.9940 954
-            </div>
-
-          </div>
-          <div class="footer">
-            <div class="footer1">
+        <footer>
             <p > Copyright &copy; - All rights Reserved - Software Engineering Department - Industrial University of Ho Chi Minh City </p>
-          </div>
-        </div>
-
-            
-
-        
+        </footer>
     </div>
 </body>
+
 </html>
